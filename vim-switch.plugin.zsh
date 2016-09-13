@@ -19,7 +19,7 @@ function vimswitch(){
 	if [[ ! -f ${VIM_FILE_PATH}/${VIM_FILE_PREFIX}${@} ]]; then
 		echo "Error, template vimrc file not exist."
 	else
-		sudo cp ${VIM_FILE_PATH}/${VIM_FILE_PREFIX}${@}	$USER/.vimrc
+		sudo cp ${VIM_FILE_PATH}/${VIM_FILE_PREFIX}${@} $HOME/.vimrc
 		VIM_FILE_MODE=${VIM_FILE_PREFIX}${@}
 		#echo "Reset local DNS setting"
 		#sudo killall -HUP mDNSResponder
